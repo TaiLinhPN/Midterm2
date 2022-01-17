@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang tin tức - Thông tin bảng tin
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/admin.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+
+
+                        <li>
+                            <a href="./tintuc.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-cloud-download fa-stack-1x " ></i></span>Quản lý vé </a>
+                        </li>
+                        <li>
+                            <a href="./adminC.html"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-cart-plus fa-stack-1x "></i></span>Quản lý tương tác</a>
+                        </li>
+                        <li>
+                            <a href="./customer.html"><span class="fa-stack fa-lg pull-left"><i class="fa fa-youtube-play fa-stack-1x "></i></span>Quản lý khách hàng</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-wrench fa-stack-1x "></i></span>Services</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-server fa-stack-1x "></i></span>Contact</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Shortcut</a>
+
+                        </li>
+                        <li class="active">
+                            <a href="./admin.html#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span> Dashboard</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="customer">
+                    <button class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
+                    <i class=" fas fa-plus mr-2"></i>Thêm Tin vào bảng tin</button>
+                    <table class="table table-bordered" id="tbl">
+                        <thead>
+                            <tr>
+                                <th>Số thứ tự</th>
+                                <th>Danh mục</th>
+                                <th>Hình ảnh</th>
+                                <th>Địa điểm</th>
+                                <th>Thời gian</th>
+                                <th>Nội dung </th>
+                                <th>Tùy chỉnh</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">THÔNG TIN BẢN TIN</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" class="form-row">
+
+                            <div class="col-12 mt-3">
+                                <!-- <input class="form-control" type="text" id="danhmuc" placeholder="Danh mục"> -->
+                                <select class="form-control" name="cars" id="danhmuc" placeholder="Danh mục">
+                                    <option value=""selected=”selected”>Chọn danh mục </option>
+                                    <option value="Hà Nội">Hà Nội</option>
+                                    <option value="Hải Phòng">Hải Phòng</option>
+                                    <option value="Thành Phố HCM">Thành Phố HCM</option>
+                                  </select>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input class="form-control" type="text" id="image" placeholder="Image">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input class="form-control" type="text" id="title" placeholder="Tiêu đề">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input class="form-control" type="date" id="date" placeholder="Thời gian">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <textarea class="form-control" id="content" rows="5" cols="50" placeholder="Nội dung"></textarea>
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <button class="btn btn-outline-primary mt-3" onclick="Them()">Thêm</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Chinhsua" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Thay đổi thông tin vé</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" class="form-row">
+                            <div class="col-12 mt-3">
+                                <input class="form-control" type="text" id="danhmucAdd" placeholder="Danh mục">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input class="form-control" type="text" id="imageAdd" placeholder="Image">
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <input class="form-control" type="text" id="titleAdd" placeholder="Title">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <input class="form-control" type="date" id="dateAdd" placeholder="Thời gian">
+                            </div>
+                            <div class="col-12 mt-3">
+                                <textarea class="form-control" id="contentAdd" rows="5" cols="50" placeholder="Nội dung"></textarea>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <button class="btn btn-outline-danger mt-3" onclick=modify()>Thay đổi</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js " integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js " integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+    <script src="./JS/tintuc.js"></script>
+    <link rel="stylesheet" href="CSS/tintuc.css">
+</body>
+
+</html>

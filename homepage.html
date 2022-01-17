@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.freeiconspng.com/thumbs/discord-icon/discord-icon-7.png">
+    <script src="https://kit.fontawesome.com/e9a94fc643.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>The band</title>
+</head>
+
+<body>
+    <div id="main">
+
+        <div id="header">
+            <ul class="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="#Band">Band</a></li>
+                <li><a href="#Tour">Tour</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li>
+                    <a href="#">More <i class="white-text more-icon fas fa-caret-down"></i> </a>
+                    <ul id="sub-nav-id" class="sub-nav">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- search-buton -->
+
+            <div class="login-signup">
+                <div class="header-Login" onclick="openLog()">Login</div>
+                <div class="header-Signup" onclick="openSign()">Signup</div>
+            </div>
+
+            <div class="header-search"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+
+            <div id="menu-mobile" class="header-menu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+
+        </div>
+
+        <div id="silder">
+            <div class="text-content">
+                <h2 class="text-heading">Chicago</h2>
+                <p class="text-description">Thank you, Chicago - A night we won't forget.</p>
+            </div>
+
+        </div>
+
+        <div id="content">
+            <!-- about -->
+            <div id="Band" class="content-section">
+                <h2 class="section-heading">THE BAND</h2>
+                <p class="sub-heading">We love music</p>
+                <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                    id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="row member-list">
+                    <div class="text-center col col-3 mobile-item ">
+                        <div class="member-name">Name</div>
+                        <img src="./img/3af0e55ea66ea69e35145fb108b4a636.jpg" alt="" class="img-member">
+                    </div>
+
+                    <div class="text-center col col-3 mobile-item">
+                        <div class="member-name">Name</div>
+                        <img src="./img/design-your-album-cover.jpg" alt="" class="img-member">
+                    </div>
+
+                    <div class="text-center col col-3 mobile-item">
+                        <div class="member-name">Name</div>
+                        <img src="./img/Something_Big.jpg" alt="" class="img-member">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <!-- TOUR -->
+            <div id="Tour" class="tour-section">
+                <div class="content-section">
+                    <h2 class="section-heading text-white">TOUR DATES</h2>
+                    <p class="sub-heading text-white">Remember to book your tickets!</p>
+
+                    <ul class="tickets-list">
+                        <li>September
+                            <spam class="sold-out">Sold out</spam>
+                        </li>
+                        <li>October
+                            <spam class="sold-out">Sold out</spam>
+                        </li>
+                        <li>November
+                            <spam class="quantity">3</spam>
+                        </li>
+                    </ul>
+
+                    <div class="place-list row">
+                        <div class="col-3 col mobile-item m-t-16">
+                            <img src="./img/eiffel-tower.jpg" alt="New York" class="place-img">
+                            <div class="place-content">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-decs">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="place-btn"><a href="">Buy ticket</a></button>
+                            </div>
+                        </div>
+
+                        <div class="col-3 col mobile-item m-t-16">
+                            <img src="./img/london.jpg" alt="New York" class="place-img">
+                            <div class="place-content">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-decs">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="place-btn"><a href="">Buy ticket</a></button>
+                            </div>
+                        </div>
+
+                        <div class="col-3 col mobile-item m-t-16">
+                            <img src=".img/freedom-tower.jpg" alt="New York" class="place-img">
+                            <div class="place-content">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-decs">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button class="place-btn"><a href="">Buy ticket</a></button>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CONTACT -->
+            <div id="Contact" class="contact  content-section">
+                <h2 class="section-heading">CONTACT</h2>
+                <p class="sub-heading">Fan? Drop a note!</p>
+
+                <div class="row ">
+                    <div class="col col-2 contact-infor mobile-item ">
+                        <p><i class="fa fa-map-marker" aria-hidden="true"></i>Chicago, US</p>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i>Phone: +00 151515</p>
+                        <p><i class="fa fa-envelope" aria-hidden="true"></i>Email: mail@mail.com</p>
+
+                    </div>
+
+                    <form class="col col-2 contact-fomt mobile-item ">
+                        <div class="row fomt">
+                            <div class="col col-2 mobile-item ">
+                                <input class="fomt-control" type="text" required placeholder="Name" name="" id="name">
+                            </div>
+
+                            <div class="col col-2 mobile-item ">
+                                <input class="fomt-control" type="text" required placeholder="Email" name="" id="email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-full">
+                                <input class="fomt-control col-full " type="text" required placeholder="Messenger" name="" id="mess">
+
+                            </div>
+                        </div>
+                        <button type="button" onclick="addC()">Send</button>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="map-section">
+                <img src="./img/singapore.jpg" alt="" class="">
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="socials-list">
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-snapchat-square" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-login">
+        <div class="modal-container">
+            <i onclick="closeModal()" class="fa fa-times-circle colse-modal" aria-hidden="true"></i>
+            <div class="add-content">herr</div>
+        </div>
+    </div>
+    <script src="./JS/main.js"></script>
+    <script src="./JS/customer.js"></script>
+    <script src="./JS/addContat.js"></script>
+</body>
+
+</html>

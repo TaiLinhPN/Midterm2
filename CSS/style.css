@@ -1,0 +1,654 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: "Lato", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: white !important;
+}
+
+
+/* https://fontawesome.com/v4.7/icons/ */
+
+
+/* ============================================================== */
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+.col-3 {
+    width: 33.333333%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.m-t-16 {
+    margin-top: 16px;
+}
+
+#header {
+    background-color: black;
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.nav {
+    display: inline-block;
+}
+
+.nav li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav>li>a {
+    text-transform: uppercase;
+}
+
+.nav li a {
+    color: #fff;
+    line-height: 48px;
+    padding: 0px 24px;
+    display: block;
+}
+
+.nav>li:hover>a,
+.sub-nav li:hover a {
+    background-color: #ccc;
+    color: #000;
+}
+
+.sub-nav {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 8px rgba(0, 0, 0, .2);
+}
+
+.nav li:hover .sub-nav {
+    display: block;
+}
+
+.sub-nav li {
+    display: block;
+    min-width: 190px;
+}
+
+.sub-nav li a {
+    color: #000;
+    line-height: 38px;
+    padding: 0 16px;
+}
+
+#header .header-menu,
+#header .header-search {
+    float: right;
+}
+
+#header .header-search {
+    margin-top: -56px;
+}
+
+#header .header-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .header-menu {
+    display: none;
+}
+
+#header .header-menu i,
+#header .header-search i {
+    color: rgb(255, 255, 255);
+    padding: 0 21px;
+    line-height: 48px;
+}
+
+#header .header-menu:hover i {
+    background-color: #ccc;
+    color: #000;
+}
+
+#header .header-search:hover i {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#silder {
+    margin-top: 48px;
+    padding-top: 50%;
+    background: url("../img/549394.jpg") top center / cover no-repeat;
+    position: relative;
+}
+
+#silder .text-content {
+    position: absolute;
+    color: #fff;
+    bottom: 48px;
+    width: 100%;
+    text-align: center;
+}
+
+#silder .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#silder .text-description {
+    font-weight: 600;
+}
+
+#content .content-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 64px 0 112PX;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#content .section-heading {
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+#content .sub-heading {
+    text-align: center;
+    margin: 15px 0;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+#content .about-text {
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.member-name {
+    margin-top: 48px;
+}
+
+#content .img-member {
+    margin-top: 15px;
+    width: 60%;
+    border-radius: 4%;
+}
+
+#content .tour-section {
+    background-color: #000;
+}
+
+#content .tickets-list {
+    margin-top: 40px;
+    background-color: white;
+}
+
+.tickets-list li {
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    padding: 3px 4px;
+    color: white;
+    margin-left: 16px;
+}
+
+.tickets-list .quantity {
+    background-color: #000000;
+    padding: 2px 10px;
+    color: white;
+    float: right;
+    border-radius: 100%;
+    margin-right: 16px;
+}
+
+.place-list {
+    margin-top: 16px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-content {
+    background-color: #fff;
+    padding: 16px;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-decs {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-btn {
+    margin-top: 15px;
+}
+
+.place-btn a {
+    display: block;
+    padding: 10px 21px;
+    background-color: #000;
+    color: #fff;
+}
+
+.place-btn a:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.fomt-control {
+    padding: 11px;
+    margin: 4px 0px;
+}
+
+.content-section input {
+    width: 100%;
+    border: #ccc 1px solid;
+}
+
+.content-section i[class*="fa-"] {
+    width: 24px;
+    display: inline-block;
+}
+
+.contact-infor {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact button {
+    border: none;
+    padding: 10px 21px;
+    background-color: #000;
+    color: #fff;
+    float: right;
+    margin-top: 10px;
+}
+
+.contact button:hover {
+    background-color: #ccc;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.contact-fomt,
+.contact-infor {
+    margin-top: 48px;
+}
+
+.map-section img {
+    width: 100%;
+    filter: grayscale(50%);
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socials-list {
+    font-size: 24px;
+}
+
+#footer a {
+    color: rgb(122, 122, 122);
+}
+
+#footer p {
+    margin-top: 15px;
+    color: rgb(122, 122, 122);
+}
+
+#footer p>a {
+    text-decoration: underline;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 800px;
+    max-width: 800px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.modal-close:hover {
+    background-color: #ccc;
+}
+
+.modal-header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-header i {
+    margin-right: 16px;
+}
+
+.main-modal {
+    padding: 16px;
+}
+
+.main-modal label {
+    display: block;
+    margin-top: 12px
+}
+
+.main-modal input {
+    width: 100%;
+    border: #757575 1px solid;
+    padding: 10px;
+    margin: 8px 0 24px 0;
+}
+
+.login-signup {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: -56px;
+    margin-right: 56px;
+    ;
+    z-index: 3;
+}
+
+.header-Login,
+.header-Signup {
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    line-height: 46px;
+}
+
+.modal-login {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(104, 104, 104, 0.3);
+}
+
+.modal-container {
+    max-width: 500px;
+    color: #aaa;
+    background-color: #fff;
+    margin: 150px auto 0;
+    position: relative;
+}
+
+.display-block {
+    display: block
+}
+
+.colse-modal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    z-index: 1;
+}
+
+.colse-modal:hover {
+    background-color: #ff3838;
+    color: #fff
+}
+
+
+/* ================================== */
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.login-wrap {
+    width: 100%;
+    margin: auto;
+    max-width: 525px;
+    min-height: 670px;
+    position: relative;
+    background: url(https://images.unsplash.com/photo-1546636889-ba9fdd63583e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fDEybW18ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80) no-repeat center;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+}
+
+.login-html {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 90px 70px 50px 70px;
+    background: rgba(28, 47, 58, 0.9);
+}
+
+.login-html .sign-in-htm,
+.login-html .sign-up-htm {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all .4s linear;
+}
+
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check {
+    display: none;
+}
+
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+    text-transform: uppercase;
+}
+
+.login-html .tab {
+    font-size: 22px;
+    margin-right: 15px;
+    padding-bottom: 5px;
+    margin: 0 15px 10px 0;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+
+.login-html .sign-in:checked+.tab,
+.login-html .sign-up:checked+.tab {
+    color: #fff;
+    border-color: #000000;
+}
+
+.login-form {
+    min-height: 345px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.login-form .group {
+    margin-bottom: 15px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+    width: 100%;
+    color: #fff;
+    display: block;
+}
+
+.login-form .group .input,
+.login-form .group .button {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, .1);
+}
+
+.login-form .group input[data-type="password"] {
+    -webkit-text-security: circle;
+}
+
+.login-form .group .label {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.login-form .group .button {
+    background: #000000;
+}
+
+.login-form .group label .icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    background: rgba(255, 255, 255, .1);
+}
+
+.login-form .group label .icon:before,
+.login-form .group label .icon:after {
+    content: '';
+    width: 10px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    transition: all .2s ease-in-out 0s;
+}
+
+.login-form .group label .icon:before {
+    left: 3px;
+    width: 5px;
+    bottom: 6px;
+    transform: scale(0) rotate(0);
+}
+
+.login-form .group label .icon:after {
+    top: 6px;
+    right: 0;
+    transform: scale(0) rotate(0);
+}
+
+.login-form .group .check:checked+label {
+    color: #fff;
+}
+
+.login-form .group .check:checked+label .icon {
+    background: #1161ee;
+}
+
+.login-form .group .check:checked+label .icon:before {
+    transform: scale(1) rotate(45deg);
+}
+
+.login-form .group .check:checked+label .icon:after {
+    transform: scale(1) rotate(-45deg);
+}
+
+.login-html .sign-in:checked+.tab+.sign-up+.tab+.login-form .sign-in-htm {
+    transform: rotate(0);
+}
+
+.login-html .sign-up:checked+.tab+.login-form .sign-up-htm {
+    transform: rotate(0);
+}
+
+.hr {
+    height: 2px;
+    margin: 60px 0 50px 0;
+    background: rgba(255, 255, 255, .2);
+}
+
+.foot-lnk {
+    text-align: center;
+}
+
+.customLogn {
+    width: 100%;
+    text-align: center;
+}
